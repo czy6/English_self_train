@@ -1,0 +1,10 @@
+com\english\ai\contoller\ChatHistoryController.class
+com\english\ai\domain\vo\MessageVO$1.class
+com\english\ai\respository\InMemoryChatHistoryRespository.class
+com\english\ai\contoller\ChatController.class
+com\english\ai\config\MvcConfiguration.class
+com\english\ai\domain\vo\MessageVO.class
+com\english\ai\domain\dto\ChatImageRequestDTO.class
+com\english\ai\AiServiceApplication.class
+com\english\ai\config\CommonConfiguration.class
+com\english\ai\respository\ChatHistoryRespository.class

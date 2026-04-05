@@ -1,0 +1,31 @@
+server:
+  port: 8082
+  tomcat:
+    max-http-form-post-size: 100MB  # Tomcat最大POST请求大小
+spring:
+  application:
+    name: ai-service
+  profiles:
+    active: dev
+  ai:
+    openai:
+      base-url: https://dashscope.aliyuncs.com/compatible-mode
+      api-key: ${API-KEY}
+      chat:
+        options:
+          model: qwen3.5-flash
+          temperature: 1.2
+          top-p: 0.9
+          presence-penalty: 0.5
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.100.128:8848
+  servlet:
+    multipart:
+      max-request-size: 100MB  # 最大请求大小（包含所有内容）
+logging:
+  level:
+    org.springframework.ai.chat.client.advisor: debug
+    com.english.ai: debug
+

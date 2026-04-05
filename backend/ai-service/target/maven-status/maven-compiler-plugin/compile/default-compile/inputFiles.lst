@@ -1,0 +1,9 @@
+D:\IDEAcode\IdeaCode\01-Maven\english-train\ai-service\src\main\java\com\english\ai\AiServiceApplication.java
+D:\IDEAcode\IdeaCode\01-Maven\english-train\ai-service\src\main\java\com\english\ai\domain\vo\MessageVO.java
+D:\IDEAcode\IdeaCode\01-Maven\english-train\ai-service\src\main\java\com\english\ai\config\CommonConfiguration.java
+D:\IDEAcode\IdeaCode\01-Maven\english-train\ai-service\src\main\java\com\english\ai\domain\dto\ChatImageRequestDTO.java
+D:\IDEAcode\IdeaCode\01-Maven\english-train\ai-service\src\main\java\com\english\ai\contoller\ChatController.java
+D:\IDEAcode\IdeaCode\01-Maven\english-train\ai-service\src\main\java\com\english\ai\config\MvcConfiguration.java
+D:\IDEAcode\IdeaCode\01-Maven\english-train\ai-service\src\main\java\com\english\ai\respository\ChatHistoryRespository.java
+D:\IDEAcode\IdeaCode\01-Maven\english-train\ai-service\src\main\java\com\english\ai\contoller\ChatHistoryController.java
+D:\IDEAcode\IdeaCode\01-Maven\english-train\ai-service\src\main\java\com\english\ai\respository\InMemoryChatHistoryRespository.java
