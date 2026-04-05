@@ -1,0 +1,77 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: langchain4j-service
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://192.168.100.128:3307/english-train?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123
+  data:
+    redis:
+      host: 192.168.100.128
+      port: 6379
+      password: 123321
+      lettuce:
+        pool:
+          max-active: 30
+          max-idle: 30
+          min-idle: 1
+          time-between-eviction-runs: 10s
+  rabbitmq:
+    host: 192.168.100.128
+    port: 5672
+    virtual-host: /english
+    username: english
+    password: 123
+  servlet:
+    multipart:
+      max-request-size: 100MB # 最大请求大小（包含所有内容）
+  jackson:
+    default-property-inclusion: non_null # JSON处理时忽略非空字段
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.100.128:8848 # Nacos服务器的地址和端口
+aliyun:
+  agent:
+    id: "3237726b736d438785a3f4418c9574b5"
+langchain4j:
+  open-ai:
+    chat-model:
+      base-url: https://dashscope.aliyuncs.com/compatible-mode/v1
+      api-key: ${API-KEY}
+      model-name: qwen3.5-plus
+      log-requests: true
+      log-responses: true
+    streaming-chat-model:
+      base-url: https://dashscope.aliyuncs.com/compatible-mode/v1
+      api-key: ${API-KEY}
+      model-name: qwen3.5-plus
+      log-requests: true
+      log-responses: true
+    # embedding-model:
+    #   base-url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    #   api-key: ${API-KEY}
+    #   model-name: multimodal-embedding-v1
+    #   log-requests: true
+    #   log-responses: true
+    #   max-segments-per-batch: 10
+  community:
+    redis:
+      host: 192.168.100.128
+      port: 6380
+logging:
+  level:
+    #    dev.langchain4j: debug
+    com.english.langchain4j: debug
+    org.mybatis.spring.boot: debug
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+feign:
+  okhttp:
+    enabled: true # 开启OKHttp功能
