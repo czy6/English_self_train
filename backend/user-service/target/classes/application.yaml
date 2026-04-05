@@ -1,0 +1,39 @@
+server:
+  port: 8081
+  tomcat:
+    threads:
+      max: 25 # 最大线程连接数
+    accept-count: 25 # 排队等待线程数
+    max-connections: 100 # 最大线程数
+    max-http-form-post-size: 100MB # Tomcat最大POST请求大小
+feign:
+  okhttp:
+    enabled: true # 开启OKHttp功能
+hm:
+  db:
+    host: 192.168.100.128
+    port: 3307
+    database: english-train
+    un: root
+    pw: 123
+  swagger:
+    title: "英语训练用户接口文档"
+    package: com.english.user.controller
+  jwt:
+    location: classpath:hmall.jks
+    alias: hmall
+    password: hmall123
+    access-token-ttl: 30m # Access Token 有效期
+    refresh-token-ttl: 7d # Refresh Token 有效期
+    renew-threshold: 5m # 续期阈值
+  auth:
+    excludes:
+      - /user/login
+      - /user/code
+      - /user/refresh
+#阿里云OSS配置
+aliyun:
+  oss:
+    endpoint: https://oss-cn-beijing.aliyuncs.com
+    bucketName: javaweb-warehouse
+    region: cn-beijing

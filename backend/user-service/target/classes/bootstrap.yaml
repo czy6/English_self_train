@@ -1,0 +1,50 @@
+spring:
+  application:
+    name: user-service
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://192.168.100.128:3307/english-train?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123
+  redis:
+    host: 192.168.100.128
+    port: 6379
+    password: 123321
+    lettuce:
+      pool:
+        max-active: 30
+        max-idle: 30
+        min-idle: 1
+        time-between-eviction-runs: 10s
+  servlet:
+    multipart:
+      max-request-size: 100MB  # 最大请求大小（包含所有内容）
+  jackson:
+    default-property-inclusion: non_null # JSON处理时忽略非空字段
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.100.128:8848
+      config:
+        file-extension: yaml
+        shared-configs:
+          - data-id: shared-log.yaml
+          - data-id: shared-swagger.yaml
+          - data-id: shared-seata.yaml
+      server-addr: 192.168.100.128:8848
+mybatis-plus:
+  configuration:
+    default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
+  global-config:
+    db-config:
+      update-strategy: not_null
+      id-type: auto
+logging:
+  level:
+    com.english.user: debug
+  pattern:
+    dateformat: HH:mm:ss:SSS
+  file:
+    path: "logs/${spring.application.name}"
