@@ -1,0 +1,6 @@
+com\english\api\dto\SaveQuestionDTO.class
+com\english\api\config\DefaultFeignConfig$1.class
+com\english\api\client\AiClient.class
+com\english\api\client\QuestionClient.class
+com\english\api\config\DefaultFeignConfig.class
+com\english\api\dto\ChatImageRequestDTO.class
