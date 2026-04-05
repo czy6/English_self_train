@@ -1,0 +1,200 @@
+{
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      // 仅匹配 uni-ui 中存在的组件（如 uni-list、uni-button 等）
+      "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue",
+      "^walking-robot$": "@/components/WalkingRobot.vue"
+    }
+  },
+  "pages": [
+    //pages 数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "pages/home/home",
+      "style": {
+        "navigationBarTitleText": "首页"
+      }
+    },
+    {
+      "path": "pages/aiChat/aiChat",
+      "style": {
+        "navigationBarTitleText": "AI 助手"
+      }
+    },
+    {
+      "path": "pages/ability/ability",
+      "style": {
+        "navigationBarTitleText": "能力分析"
+      }
+    },
+    {
+      "path": "pages/my/my",
+      "style": {
+        "navigationBarTitleText": "我的"
+      }
+    }
+  ],
+  "subPackages": [
+    {
+      "root": "pages/profile",
+      "pages": [
+        {
+          "path": "profile",
+          "style": {
+            "navigationBarTitleText": "编辑个人资料"
+          }
+        }
+      ]
+    },
+    {
+      "root": "pages/login",
+      "pages": [
+        {
+          "path": "login",
+          "style": {
+            "navigationBarTitleText": "登录",
+            "navigationBarBackgroundColor": "#FFFFFF",
+            "navigationBarTextStyle": "black"
+          }
+        }
+      ]
+    },
+    {
+      "root": "pages/favorites",
+      "pages": [
+        {
+          "path": "favorites",
+          "style": {
+            "navigationBarTitleText": "我的收藏"
+          }
+        }
+      ]
+    },
+    {
+      "root": "pages/history",
+      "pages": [
+        {
+          "path": "history",
+          "style": {
+            "navigationBarTitleText": "学习历史"
+          }
+        }
+      ]
+    },
+    {
+      "root": "pages/set",
+      "pages": [
+        {
+          "path": "set",
+          "style": {
+            "navigationBarTitleText": "设置"
+          }
+        }
+      ]
+    },
+    {
+      "root": "pages/about",
+      "pages": [
+        {
+          "path": "about",
+          "style": {
+            "navigationBarTitleText": "关于我们"
+          }
+        }
+      ]
+    },
+    {
+      "root": "pages/listening",
+      "pages": [
+        {
+          "path": "listening",
+          "style": {
+            "navigationBarTitleText": "听力"
+          }
+        }
+      ]
+    },
+    {
+      "root": "pages/reading",
+      "pages": [
+        {
+          "path": "reading",
+          "style": {
+            "navigationBarTitleText": "阅读"
+          }
+        }
+      ]
+    },
+    {
+      "root": "pages/translation",
+      "pages": [
+        {
+          "path": "translation",
+          "style": {
+            "navigationBarTitleText": "翻译"
+          }
+        }
+      ]
+    },
+    {
+      "root": "pages/writing",
+      "pages": [
+        {
+          "path": "writing",
+          "style": {
+            "navigationBarTitleText": "写作"
+          }
+        }
+      ]
+    },
+    {
+      "root": "pages/test",
+      "pages": [
+        {
+          "path": "test",
+          "style": {
+            "navigationBarTitleText": "测试"
+          }
+        }
+      ]
+    }
+  ],
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#27ba9b",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/home/home",
+        "iconPath": "static/tabs/home_default.png",
+        "selectedIconPath": "static/tabs/home_selected.png"
+      },
+      {
+        "text": "AI助手",
+        "pagePath": "pages/aiChat/aiChat",
+        "iconPath": "static/tabs/ai_default.png",
+        "selectedIconPath": "static/tabs/ai_selected.png"
+      },
+      {
+        "text": "能力分析",
+        "pagePath": "pages/ability/ability",
+        "iconPath": "static/tabs/ai_default.png",
+        "selectedIconPath": "static/tabs/ai_selected.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/my/my",
+        "iconPath": "static/tabs/user_default.png",
+        "selectedIconPath": "static/tabs/user_selected.png"
+      }
+    ]
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  }
+}
