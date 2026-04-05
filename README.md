@@ -99,13 +99,13 @@ english-train (父工程)
 
 ### 2. AI 智能批改 ⭐
 
-- 集成 Coze AI 大模型 API
-- 支持翻译/写作题目自动批改
-- 智能评分 + 详细评语
+- 集成 Coze AI 智能体
+- 支持题目自动批改
+- 智能评分
+- 详细评语
 
 ### 3. 个性化题目推荐 ⭐
 
-- 基于 XGBoost 机器学习模型
 - 熟练度预测算法
 - 薄弱知识点分析
 
@@ -138,8 +138,7 @@ english-train (父工程)
 
 - ✅ 核心模块单元测试覆盖率 **85%+**
 - ✅ 代码规范符合阿里巴巴 Java 开发手册
-- ✅ 使用 Checkstyle + SpotBugs 代码检查
-- ✅ Git Commit 规范（feat/fix/docs/style/refactor/test/chore）
+- ✅ Git Commit 规范
 
 ---
 
@@ -162,7 +161,6 @@ english-train (父工程)
 
 ```bash
 git clone https://github.com/czy6/English_self_train.git
-cd english-train
 ```
 
 #### 2. 配置环境变量
@@ -193,50 +191,6 @@ mvn clean install -pl english-common -am
 cd frontend
 npm install
 ```
-
-#### 5. 启动服务
-
-**后端服务**：
-
-```bash
-# 使用启动脚本
-./start-with-env.bat
-```
-
-**前端服务**：
-
-```bash
-cd frontend
-npm run dev
-```
-
----
-
-## 📝 开发规范
-
-### Git Commit 规范
-
-```bash
-# 新功能
-git commit -m "feat(langchain4j): 添加 SSE 流式对话功能"
-
-# Bug 修复
-git commit -m "fix(cache): 修复缓存击穿问题"
-
-# 文档更新
-git commit -m "docs(readme): 更新项目文档"
-
-# 代码重构
-git commit -m "refactor(auth): 优化认证逻辑"
-```
-
-### 代码规范
-
-- 后端：遵循《阿里巴巴 Java 开发手册》
-- 前端：遵循 Vue 3 代码风格指南
-- 使用 Checkstyle + SpotBugs 代码检查
-- 核心方法必须写 Javadoc 注释
-
 ---
 
 ## 📄 项目文档
@@ -257,12 +211,6 @@ git commit -m "refactor(auth): 优化认证逻辑"
 - ✅ 企业级项目的安全认证机制
 - ✅ 规范化开发流程与代码质量管理
 - ✅ Vue 3 + TypeScript 前端开发
-
----
-
-## 📄 开源协议
-
-MIT License
 
 ---
 
