@@ -1,0 +1,12 @@
+server:
+  port: 8080
+hm:
+  jwt:
+    location: classpath:hmall.jks
+    alias: hmall
+    password: hmall123
+    tokenTTL: 60m
+  auth:
+    excludePaths:
+      - /user/login
+      - /user/code
